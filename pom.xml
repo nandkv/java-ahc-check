@@ -2,39 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.course</groupId>
-	<artifactId>udemy</artifactId>
-	<version>0.0.9-SNAPSHOT</version>
+	<groupId>com.nand</groupId>
+	<artifactId>java-ahc-check</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>udemy</name>
-	<description>Demo project for Spring Boot</description>
-	
-	<distributionManagement>
-		<repository>
-			<id>libs-release-local</id>
-			<name>libs-release-local</name>
-			<url>http://localhost:8081/artifactory/libs-release-local</url>
-		</repository>
-		<snapshotRepository>		 
- 			<id>libs-snapshot-local</id>		
- 			<name>libs-snapshot-local</name>		
- 			<url>http://localhost:8081/artifactory/libs-snapshot-local</url>		
- 		</snapshotRepository>
-	</distributionManagement>
-	
-	<scm>
-		<connection>scm:git:git@github.com:nandkv/udemy.git</connection>
-		<developerConnection>scm:git:git@github.com:nandkv/udemy.git</developerConnection>
-		<url>git@github.com:nandkv/udemy.git</url>
-		<tag>HEAD</tag>
-	</scm>
-		
+	<name>java-ahc-check</name>
+	<description>AHC project for Spring Boot</description>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.4.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 
 	<properties>
@@ -48,52 +28,51 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-    <dependency>
-        <groupId>org.thymeleaf.extras</groupId>
-        <artifactId>thymeleaf-extras-tiles2</artifactId>
-        <version>2.0.0</version>
-    </dependency>
-    
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-tiles2</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
- 
+
 		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-logging</artifactId>
-		</dependency>
-  	
-		<dependency>
-		    <groupId>org.apache.tiles</groupId>
-		    <artifactId>tiles-core</artifactId>
-		    <version>2.2.2</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 
 		<dependency>
-		    <groupId>com.lowagie</groupId>
-		    <artifactId>itext</artifactId>
-		    <version>4.2.2</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-logging</artifactId>
 		</dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-        </dependency>
-        
 		<dependency>
-		    <groupId>org.apache.commons</groupId>
-		    <artifactId>commons-lang3</artifactId>
-		    <version>3.6</version>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-core</artifactId>
+			<version>2.2.2</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+			<version>4.2.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.6</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -107,15 +86,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.5.1</version>
-				<configuration>
-					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
